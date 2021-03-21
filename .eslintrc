@@ -1,0 +1,93 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier", "import", "unused-imports"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "plugin:prettier/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+        "prettier/prettier": "warn",
+        //    "space-in-parens": ["error", "always"],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+        ],
+        /* "unused-imports/no-unused-imports-ts": "error",
+      "unused-imports/no-unused-vars-ts": [
+        "warn",
+        { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+      ], */
+        "no-debugger": "off",
+       /*  "with-tsc-error/all": ["warn",
+            {
+                "reportOnly": false
+            }
+        ], */
+        "prefer-const": "error",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "import/no-duplicates":"off",
+        "@typescript-eslint/ban-ts-comment": "error",
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "react-hooks/exhaustive-deps":"off",
+        "@typescript-eslint/no-non-null-assertion": "error",
+        "no-extra-boolean-cast": "off",
+        "@typescript-eslint/no-extra-semi": "off",
+        "react/jsx-curly-newline": [
+            "off",
+            {
+                "multiline": "consistent",
+                "singleline": "consistent"
+            }
+        ],
+        "@typescript-eslint/ban-types": [
+            "error",
+            {
+                "extendDefaults": true,
+                "types": {
+                    "{}": false
+                }
+            }
+        ],
+        "no-prototype-builtins": "off",
+        "import/order": [
+            "warn",
+            {
+                "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+                "newlines-between": "always"
+            }
+        ]
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true
+            },
+            "node": {
+                //"paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    },
+    "globals": {
+        "document": true,
+        "foo": true,
+        "window": true
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}

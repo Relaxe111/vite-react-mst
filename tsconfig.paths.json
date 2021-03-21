@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "@mst/*":["src/mst/*"],
+            "@modules/*":["src/modules/*"],
+            "@components/*":["src/components/*"],
+            "@componentsantd":["src/components/AntdComponents"]
+        }
+    }
+}
